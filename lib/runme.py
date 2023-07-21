@@ -3,7 +3,7 @@ from Song import Song
 from Set import Set
 import sqlite3
 import json
-database = "test"
+database = "data"
 
 
 def launch():
@@ -12,23 +12,20 @@ def launch():
     while(exit_check):
         print("")
         print("")
-        print("1) add a DJ")
-        print("2) enter a set list")
-        print("3) check sets")
-        print("4) check a song's total play count")
-        print("5) check how many times a DJ has played a song")
+        print("1) enter a set list")
+        print("2) check sets")
+        print("3) check a song's total play count")
+        print("4) check how many times a DJ has played a song")
         print("type 'exit' to quit the program")
         print("")
         selection = input("Enter a number to choose an option: ")
         if selection == "1":
-            add_new_DJ()
-        elif selection == "2":
             create_a_set()
-        elif selection == "3":
+        elif selection == "2":
             check_set_lists()
-        elif selection == "4":
+        elif selection == "3":
             check_total_rinse()
-        elif selection == "5":
+        elif selection == "4":
             check_self_rinse()
         elif selection == "djs":
             test_DJs()
@@ -237,5 +234,5 @@ def instantiate():
     for set in sets:
         Set(set[1], (json.loads(set[2])), set[0])
     
-
-launch()
+if __name__ == '__main__':
+    launch()

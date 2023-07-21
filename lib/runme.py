@@ -7,6 +7,7 @@ database = "data"
 
 
 def launch():
+    create_db()
     instantiate()
     exit_check = True
     while(exit_check):
@@ -54,16 +55,6 @@ def test_songs():
     for song in Song.all_songs:
         print(song)
         print("")
-
-def add_new_DJ():
-    name = input("Please enter the DJ's name here: ")
-    DJ(name)
-
-def add_new_song():
-    title = input("Please enter the song title here: ")
-    print("")
-    artist = input("Please enter the song's artist here: ")
-    Song()
 
 def create_a_set():
     select_dj = True

@@ -43,14 +43,17 @@ def launch():
 def test_sets():
     for set in Set.all_sets:
         print(set)
+        print("")
 
 def test_DJs():
     for dj in DJ.all_DJs:
         print(dj)
+        print("")
 
 def test_songs():
     for song in Song.all_songs:
         print(song)
+        print("")
 
 def add_new_DJ():
     name = input("Please enter the DJ's name here: ")

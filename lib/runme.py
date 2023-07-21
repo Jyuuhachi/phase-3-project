@@ -87,10 +87,8 @@ def create_a_set():
                                 print(check_djs)
                                 print(performing_dj)
                                 if check_djs == []:
-                                    print("gets to the track_list for loop")
                                     for track in track_list:
                                         if song.title == track.title and song.artist == track.artist:
-                                            print("song found in track_list where play info has no DJs")
                                             song.play_info[performing_dj.name] = 1
                                             track_list.append(song)
                                             found_match = True
@@ -98,10 +96,8 @@ def create_a_set():
                                     track_list.append(song)
                                 else:
                                     if performing_dj.name in check_djs:
-                                        print("gets to the track_list for loop")
                                         for track in track_list:
                                             if song.title == track.title and song.artist == track.artist:
-                                                print("found song in track_list and found DJ in songs play info")
                                                 song.play_info[performing_dj.name] += 1
                                                 found_match = True
                                                 track_list.append(song)
@@ -112,7 +108,6 @@ def create_a_set():
                                         found_match = True
                                         track_list.append(song)
                         if found_match == False:
-                            print("found_match == False triggering")
                             track_list.append(Song(artist, title, {performing_dj.name : 1}))
                                 
                 elif add_song == "2":
